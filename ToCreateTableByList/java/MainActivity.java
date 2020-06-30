@@ -48,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
 
-        myToCreateTableByList TheTable = new myToCreateTableByList(this, TheListView, Container_Columns0ToN, ModuleListColumns_ViewID, TitleOfColumns);
+        int res_Layout_ColumnStyle = R.layout.simpleadapterlayout;
+
+
+        myToCreateTableByList TheTable = new myToCreateTableByList(this, TheListView, Container_Columns0ToN, ModuleListColumns_ViewID, TitleOfColumns, res_Layout_ColumnStyle);
+
 
         //Just for Example of setOnItemClickListener
         TheTable.ListViewOnActivity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
