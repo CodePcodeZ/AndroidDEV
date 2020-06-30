@@ -1,4 +1,4 @@
-package codep.codez;;
+package codep.codez;
 
 import android.content.Context;
 import android.widget.ListView;
@@ -19,8 +19,10 @@ class myToCreateTableByList {
     int[] ModuleListColumns_ViewID;
     String[] TitleOfColumns;
 
+    int res_Layout_ColumnStyle;
 
-    myToCreateTableByList(Context context, ListView ListViewOnActivity, ArrayList<String[]> Container_Columns0ToN, int[] ModuleListColumns_ViewID, String[] TitleOfColumns) {
+
+    myToCreateTableByList(Context context, ListView ListViewOnActivity, ArrayList<String[]> Container_Columns0ToN, int[] ModuleListColumns_ViewID, String[] TitleOfColumns, int res_Layout_ColumnStyle) {
 
         this.context = context;
         this.ListViewOnActivity = ListViewOnActivity;
@@ -30,6 +32,8 @@ class myToCreateTableByList {
 
         this.ModuleListColumns_ViewID = ModuleListColumns_ViewID;
         this.TitleOfColumns = TitleOfColumns;
+
+        this.res_Layout_ColumnStyle = res_Layout_ColumnStyle;
 
 
         DoTable();
@@ -63,7 +67,7 @@ class myToCreateTableByList {
         }
 
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(context, items, R.layout.simpleadapterlayout, TitleOfColumns, ModuleListColumns_ViewID);
+        SimpleAdapter simpleAdapter = new SimpleAdapter(context, items, res_Layout_ColumnStyle, TitleOfColumns, ModuleListColumns_ViewID);
 
         ListViewOnActivity.setAdapter(simpleAdapter);
 
